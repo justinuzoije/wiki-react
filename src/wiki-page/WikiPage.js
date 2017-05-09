@@ -5,13 +5,15 @@ import * as actions from './WikiPage.actions';
 class WikiPage extends React.Component {
   render() {
     return (
-      <h1>Hello</h1>
+      <div>
+      <button onClick={() =>
+      this.props.fetchPage('JavaScript')}>Fetch</button>
     );
   }
 }
 
 const WikiPageContainer = ReactRedux.connect(
-  null,
+  state => state.wiki,
   actions
 )(WikiPage);
 
