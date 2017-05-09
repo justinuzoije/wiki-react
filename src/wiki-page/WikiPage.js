@@ -6,11 +6,15 @@ class WikiPage extends React.Component {
   render() {
     return (
       <div>
-      <button onClick={() =>
-      this.props.fetchPage('JavaScript')}>Fetch</button>
+        <p>{this.props.content}</p>
+        <button onClick={() =>
+        this.props.fetchPage('JavaScript')}>Fetch</button>
+      </div>
     );
   }
 }
+
+
 
 const WikiPageContainer = ReactRedux.connect(
   state => state.wiki,
